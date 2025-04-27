@@ -6,8 +6,6 @@ export async function GET() {
   if (!apiKey) {
     return NextResponse.json({ error: "API key not set" }, { status: 500 });
   }
-  console.log(apiKey);
-  
 
   try {
     const res = await fetch("https://api.api-ninjas.com/v1/quotes", {

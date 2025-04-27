@@ -13,17 +13,20 @@ export default function QuoteItem({
   onRemove: () => void;
 }) {
   return (
-    <motion.li
-      className="bg-white p-4 rounded shadow flex justify-between items-center"
-      whileHover={{ scale: 1.05 }}
+    <motion.blockquote
+      className="bg-gray-100 p-6 rounded shadow flex flex-col gap-4"
+      whileHover={{ border: "1px solid #ccc" }}
     >
-      <p>{quote.quote} - <strong>{quote.author}</strong></p>
-      <button
-        onClick={onRemove}
-        className="bg-red-500 text-white px-2 py-1 rounded ml-4"
-      >
-        X
-      </button>
-    </motion.li>
+      <p className="text-lg text-gray-700 font-light"><span className="font-bold">"</span>{quote.quote}<span className="font-bold">"</span></p>
+      <div className="flex justify-between px-3 align-center">
+        <p className="text-sm font-medium text-blue-500">{quote.author}</p>
+        <button
+          onClick={onRemove}
+          className="bg-red-600 text-white px-4 py-2 rounded self-end"
+        >
+          X
+        </button>
+      </div>
+    </motion.blockquote>
   );
 }

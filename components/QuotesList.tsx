@@ -40,11 +40,11 @@ export default function QuotesList({ initialQuotes }: { initialQuotes: Quote[] }
     };
 
     return (
-        <div>
+        <div className="p-10">
             <div className="flex justify-between mb-6">
-                <h1 className="text-3xl font-bold">Inspirational Quotes</h1>
+                <h1 className="text-3xl font-bold font-serif">Inspirational Quotes</h1>
                 <button
-                    className="bg-red-500 text-white py-2 px-4 rounded"
+                    className="bg-red-600 text-white py-2 px-4 rounded"
                     onClick={logout}
                 >
                     Logout

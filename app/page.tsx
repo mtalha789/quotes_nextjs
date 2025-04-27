@@ -8,19 +8,24 @@ export default function SignInPage() {
   const { login } = useAuth();
 
   return (
-    <div className="h-screen flex justify-center items-center bg-gray-100">
-      <div className="bg-white p-8 rounded shadow-md w-80">
-        <h2 className="text-2xl font-bold mb-4">Sign In</h2>
+    <div className="h-screen flex justify-center items-center flex-col bg-gray-200">
+      <h1 className="text-4xl font-bold mb-8 font-serif">Inspirational Quotes</h1>
+      <div className="bg-white rounded shadow-md p-8 w-80">
+        <h2 className="text-3xl font-bold mb-4 text-center">Sign In</h2>
+        <label htmlFor="username" className="block mb-2">
+          Username
+        </label>
         <input
           type="text"
-          className="border p-2 w-full mb-4"
+          className="border rounded-s-sm p-2 w-full mb-4"
           placeholder="Enter Username"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
         />
         <button
-          className="bg-blue-500 text-white px-4 py-2 w-full rounded"
+          className="bg-blue-500 text-white rounded-md px-4 py-2 w-full"
           onClick={() => login(username)}
+          disabled={!username}
         >
           Login
         </button>
@@ -28,3 +33,4 @@ export default function SignInPage() {
     </div>
   );
 }
+
