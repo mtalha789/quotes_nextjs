@@ -17,7 +17,11 @@ export default function QuoteItem({
       className="bg-gray-100 p-6 rounded shadow flex flex-col gap-4"
       whileHover={{ border: "1px solid #ccc" }}
     >
-      <p className="text-lg text-gray-700 font-light"><span className="font-bold">"</span>{quote.quote}<span className="font-bold">"</span></p>
+      <p className="text-lg text-gray-700 font-light">
+        <span className="font-bold">&ldquo;</span>
+        {quote.quote}
+        <span className="font-bold">&rdquo;</span>
+      </p>
       <div className="flex justify-between px-3 align-center">
         <p className="text-sm font-medium text-blue-500">{quote.author}</p>
         <button
